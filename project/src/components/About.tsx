@@ -64,10 +64,11 @@ const teamMembers = [
     image: "/assets/Hardik P Shigli_Marketing.jpg",
     linkedin: "https://www.linkedin.com/in/hardik-p-shigli-21n24/"
   },
+  //Changes to be made
   {
     name: "Kartik Sharma",
     role: "Marketing Head",
-    image: "https://via.placeholder.com/300x400/2a2e35/44d3d3?text=Kartik+Sharma",
+    image: "/",
     linkedin: "https://www.linkedin.com/in/kartik-sharma2509/"
   },
   {
@@ -117,7 +118,7 @@ const teamMembers = [
 const gcube = {
   name: "GCube",
   description: "GCube is the official game development club of PES University, fostering creativity and innovation in game design and development. The club organizes workshops, game jams, and collaborative projects to help students learn and grow in the gaming industry.",
-  image: "public/assets/image.png",
+  image: "./assets/image.png",
   linkedin: "https://www.linkedin.com/company/gcube-pes-university/"
 };
 import { Users, Clock, Trophy } from 'lucide-react';
@@ -154,8 +155,8 @@ const About = () => {
 
               <div className="text-center p-6 bg-gunmetal/50 tri-cut neon-border hover:bg-gunmetal/70 hover:scale-105 transition-all duration-300 group">
                 <Users className="w-8 h-8 mx-auto mb-3 text-teal-glow group-hover:text-neon-mint transition-colors duration-300" />
-                <h3 className="font-bold text-soft-white mb-2 font-azonix">40-45 Teams</h3>
-                <p className="text-sm text-soft-white/60 font-inter">3-5 members each</p>
+                <h3 className="font-bold text-soft-white mb-2 font-azonix">40 Teams</h3>
+                <p className="text-sm text-soft-white/60 font-inter">4 members each</p>
               </div>
 
               <div className="text-center p-6 bg-gunmetal/50 tri-cut neon-border hover:bg-gunmetal/70 hover:scale-105 transition-all duration-300 group">
