@@ -178,7 +178,7 @@ const About = () => {
                   Build the next generation of games with fellow developers.
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {["Unity", "Unreal", "Godot", "JavaScript", "C#", "Python"].map((tech) => (
+                  {["Unity", "Unreal", "Godot", "JavaScript", "C#", "Python", "Blender", "Maya"].map((tech) => (
                     <span key={tech} className="px-3 py-1 bg-gunmetal/50 text-neon-mint tri-cut-sm text-sm border border-neon-mint/30 font-inter">
                       {tech}
                     </span>

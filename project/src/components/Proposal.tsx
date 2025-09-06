@@ -18,11 +18,6 @@ const Proposal = () => {
       title: "Professional Evaluation",
       description: "Games evaluated by expert panels providing valuable academic and practical feedback."
     },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Reputation Building",
-      description: "Strengthen PES University's position as a hub for game development and interactive media."
-    }
   ];
 
   return (
@@ -43,7 +38,7 @@ const Proposal = () => {
           <div className="bg-gradient-to-r from-neon-mint/8 to-teal-glow/8 tri-cut p-8 neon-border glass">
             <p className="text-lg text-soft-white/80 leading-relaxed text-center font-inter">
               Altverse is a dynamic and creative competition where participants will design and develop original games 
-              based on a surprise theme. Teams (40–45 shortlisted, with 3–5 members each) will work intensively under 
+              based on a surprise theme. Teams (40 shortlisted, with 4 members each) will work intensively under 
               mentorship from industry professionals and faculty experts. Games will be evaluated by a panel of experts, 
               providing participants with academic and practical feedback. The event strengthens PES University's 
               reputation as a hub for game development and interactive media.

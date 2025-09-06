@@ -21,7 +21,7 @@ const Register = () => {
     {
       icon: <Calendar className="w-6 h-6" />,
       title: "24-Hour Challenge",
-      description: "Push your limits in an intensive coding marathon"
+      description: "Push your limits in an intensive gamejam"
     }
   ];
 
@@ -65,9 +65,9 @@ const Register = () => {
                 Registration Details
               </h4>
               <ul className="space-y-2 text-soft-white/80 font-inter">
-                <li>• Early bird registration opens soon</li>
+                <li>• Registration are open</li>
                 <li>• Limited spots: 40-45 teams only</li>
-                <li>• Team size: 3-5 members</li>
+                <li>• Team size: 4 members</li>
                 <li>• Open to all Karnataka students</li>
                 <li>• Registration includes meals and swag</li>
               </ul>
