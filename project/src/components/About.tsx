@@ -104,7 +104,7 @@ const teamMembers = [
   },
   {
     name: "Shashwat Jha",
-    role: "Sponsorship",
+    role: "Sponsorship Head",
     image: "/assets/shashwat.jpeg",
     linkedin: "https://www.linkedin.com/in/shashwat-jha-7a726b296/"
   },
