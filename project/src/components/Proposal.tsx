@@ -46,7 +46,7 @@ const Proposal = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center text-center max-w-5xl mx-auto">
           {features.map((feature, index) => (
             <div key={index} className="group relative">
               <div className="bg-gunmetal/50 tri-cut p-6 neon-border hover:bg-gunmetal/70 transition-all duration-300 hover:transform hover:scale-105 group">

@@ -57,12 +57,24 @@ const Contact = () => {
                 For queries, contact G Cube – The Game Development Club, PES University. 
                 We're here to help with any questions about Altverse 2025.
               </p>
+
+              {/* Key Contacts */}
+              <div className="grid sm:grid-cols-2 gap-4 mb-6">
+                <div className="bg-gunmetal/50 tri-cut p-4 neon-border">
+                  <h4 className="font-bold text-soft-white mb-1 font-inter">Dhruv Jain</h4>
+                  <p className="text-soft-white/70 font-inter text-sm">Phone: 8765552020</p>
+                </div>
+                <div className="bg-gunmetal/50 tri-cut p-4 neon-border">
+                  <h4 className="font-bold text-soft-white mb-1 font-inter">Vajra</h4>
+                  <p className="text-soft-white/70 font-inter text-sm">Phone: 7386650711</p>
+                </div>
+              </div>
               
               <div className="flex items-start space-x-4 mb-6">
                 <MapPin className="w-6 h-6 text-neon-mint mt-1" />
                 <div>
                   <h4 className="font-bold text-soft-white mb-1 font-inter">Location</h4>
-                  <p className="text-soft-white/60 font-inter">PESU52, RR Campus<br />PES University, Bangalore</p>
+                  <p className="text-soft-white/60 font-inter">MRD Auditorium, RR Campus<br />PES University, Bangalore</p>
                 </div>
               </div>
 

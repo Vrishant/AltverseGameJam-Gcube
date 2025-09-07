@@ -214,6 +214,15 @@ const Header: React.FC = () => {
       <div 
         className="glass neon-border tri-cut px-4 py-3 shadow-lg relative z-50 bg-gradient-to-r from-gunmetal/95 to-onyx/95 mt-3 font-azonix"
       >
+        <div className="marquee-container bg-gunmetal/80 text-neon-mint text-sm tri-cut-sm neon-border mb-2">
+          <div className="marquee py-1">
+            <span>Deadline to register for Altverse is 10th September, 11:59 PM</span>
+            <span aria-hidden="true">Deadline to register for Altverse is 10th September, 11:59 PM</span>
+            <span aria-hidden="true">Deadline to register for Altverse is 10th September, 11:59 PM</span>
+            <span aria-hidden="true">Deadline to register for Altverse is 10th September, 11:59 PM</span>
+            <span aria-hidden="true">Deadline to register for Altverse is 10th September, 11:59 PM</span>
+          </div>
+        </div>
         
         <div className="flex items-center justify-between">
           {/* Altverse logo and text */}

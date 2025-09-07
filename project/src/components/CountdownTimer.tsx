@@ -72,7 +72,7 @@ const CountdownTimer = () => {
         
         <div className="mt-4 text-center">
           <p className="text-sm text-soft-white/70 font-inter">
-            September 13-14, 2025 • PESU52, RR Campus
+            September 13-14, 2025 • MRD Auditorium, RR Campus
           </p>
         </div>
       </div>

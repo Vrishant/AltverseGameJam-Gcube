@@ -1,4 +1,5 @@
 import React from 'react';
+import TiltedCard from './TiltedCard';
 // Data for club heads, team members, and GCube
 const clubHeads = [
   {
@@ -68,7 +69,7 @@ const teamMembers = [
   {
     name: "Kartik Sharma",
     role: "Marketing Head",
-    image: "/",
+    image: "/assets/kartiksharma.jpeg",
     linkedin: "https://www.linkedin.com/in/kartik-sharma2509/"
   },
   {
@@ -92,7 +93,7 @@ const teamMembers = [
   {
     name: "Harshith P",
     role: "Operations Head",
-    image: "/assets/Harshith_P_Operations.heic",
+    image: "/assets/harshith.jpeg",
     linkedin: "https://www.linkedin.com/in/harshith-p-5619ab1b5/"
   },
   {
@@ -104,11 +105,17 @@ const teamMembers = [
   {
     name: "Shashwat Jha",
     role: "Sponsorship",
-    image: "/assets/Harshaa_Vardhana_Sponsorship.jpg",
+    image: "/assets/shashwat.jpeg",
     linkedin: "https://www.linkedin.com/in/shashwat-jha-7a726b296/"
   },
   {
-    name: "Shreehas Adusumilli",
+    name: "AVSN Sai Srujan",
+    role: "Sponsorship Head",
+    image: "/assets/saisrujan.jpeg",
+    linkedin: "https://www.linkedin.com/in/sai-srujan-498313307?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+  },
+  {
+    name: "Sreehas Adusumilli",
     role: "Video Editing",
     image: "/assets/Sreehas A_Video Editing.jpg",
     linkedin: "https://www.linkedin.com/in/sreehas-adusumilli/"
@@ -125,7 +132,7 @@ import { Users, Clock, Trophy } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 pt-24 px-4 bg-gradient-to-b from-onyx to-gunmetal relative">
+    <section id="about" className="py-24 pt-32 px-4 bg-gradient-to-b from-onyx to-gunmetal relative">
       {/* Triangulated divider */}
       <div className="absolute top-0 left-0 w-full h-8 bg-gradient-to-r from-neon-mint/10 to-teal-glow/10" 
            style={{ clipPath: 'polygon(0 0, 100% 0, 95% 100%, 5% 100%)' }}></div>
@@ -211,16 +218,9 @@ const About = () => {
         <div className="mt-20 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-neon-mint to-teal-glow bg-clip-text text-transparent font-azonix">Club Heads</h2>
           <div className="w-16 h-1 bg-gradient-to-r from-neon-mint to-teal-glow mx-auto tri-cut-sm mb-6"></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center">
             {clubHeads.map((head) => (
-              <div key={head.name} className="w-72 h-96 hover:scale-105 transition-transform duration-300 bg-gunmetal/70 p-0 rounded-2xl neon-border flex flex-col items-center justify-end shadow-xl">
-                <img src={head.image} alt={head.name} className="w-full h-2/3 object-cover rounded-t-2xl mb-0" style={{objectPosition:'center'}} />
-                <div className="w-full px-8 pb-8 pt-6 flex flex-col items-center">
-                  <h3 className="font-bold text-neon-mint font-azonix mb-1 drop-shadow-lg">{head.name}</h3>
-                  <p className="text-xs text-teal-glow font-azonix mb-2 drop-shadow">{head.role}</p>
-                  <a href={head.linkedin} target="_blank" rel="noopener noreferrer" className="text-neon-mint hover:text-teal-glow font-bold">LinkedIn</a>
-                </div>
-              </div>
+              <TiltedCard key={head.name} member={head} />
             ))}
           </div>
         </div>
@@ -229,16 +229,9 @@ const About = () => {
         <div className="mt-20 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-neon-mint to-teal-glow bg-clip-text text-transparent font-azonix">Team Members</h2>
           <div className="w-16 h-1 bg-gradient-to-r from-neon-mint to-teal-glow mx-auto tri-cut-sm mb-6"></div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-items-center">
             {teamMembers.map((member) => (
-              <div key={member.name} className="w-72 h-96 hover:scale-105 transition-transform duration-300 bg-gunmetal/70 p-0 rounded-2xl neon-border flex flex-col items-center justify-end shadow-xl">
-                <img src={member.image} alt={member.name} className="w-full h-2/3 object-cover rounded-t-2xl mb-0" style={{objectPosition:'center'}} />
-                <div className="w-full px-8 pb-8 pt-6 flex flex-col items-center">
-                  <h3 className="font-bold text-neon-mint font-azonix mb-1 drop-shadow-lg">{member.name}</h3>
-                  <p className="text-xs text-teal-glow font-azonix mb-2 drop-shadow">{member.role}</p>
-                  <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-neon-mint hover:text-teal-glow font-bold">LinkedIn</a>
-                </div>
-              </div>
+              <TiltedCard key={member.name} member={member} />
             ))}
           </div>
         </div>
