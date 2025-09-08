@@ -4,7 +4,7 @@ import CountdownTimer from './CountdownTimer';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden noise-overlay pt-12 md:pt-16">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden noise-overlay pt-24 md:pt-28">
       {/* Background with overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-gunmetal via-onyx to-graphite">
         <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg')] bg-cover bg-center opacity-20"></div>
@@ -37,7 +37,7 @@ const Hero = () => {
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="w-5 h-5 text-neon-mint" />
-              <span>PESU52, RR Campus, PES University</span>
+              <span>MRD Auditorium, RR Campus, PES University</span>
             </div>
           </div>
         </div>

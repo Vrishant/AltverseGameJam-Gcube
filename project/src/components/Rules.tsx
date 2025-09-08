@@ -6,7 +6,7 @@ const Rules = () => {
     {
       icon: <Users className="w-6 h-6" />,
       title: "Team Composition",
-      description: "Teams must have 3–5 members each"
+      description: "Teams must have 4 members each"
     },
     {
       icon: <Clock className="w-6 h-6" />,
