@@ -10,6 +10,8 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import About from './components/About';
 
+import Sponsors from './components/Sponsors';
+
 
 function MainPage() {
   return (
@@ -17,6 +19,7 @@ function MainPage() {
       <Hero />
       <Proposal />
       <Rules />
+    <Sponsors />
       <Register />
       <Contact />
       <Footer />

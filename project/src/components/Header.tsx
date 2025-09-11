@@ -57,12 +57,13 @@ const Header: React.FC = () => {
 
   // Updated navItems structure to match the project components
   const navItems = React.useMemo(() => [
-    { name: 'Home', path: '/', sectionId: 'home' },
-    { name: 'About', path: '/about' },
-    { name: 'Rules', path: '/', sectionId: 'rules' },
-    { name: 'Register', path: '/', sectionId: 'register' },
-    { name: 'Proposal', path: '/', sectionId: 'proposal' },
-    { name: 'Contact', path: '/', sectionId: 'contact' },
+  { name: 'Home', path: '/', sectionId: 'home' },
+  { name: 'About', path: '/about' },
+  { name: 'Rules', path: '/', sectionId: 'rules' },
+  { name: 'Sponsors', path: '/', sectionId: 'sponsors' },
+  { name: 'Register', path: '/', sectionId: 'register' },
+  { name: 'Proposal', path: '/', sectionId: 'proposal' },
+  { name: 'Contact', path: '/', sectionId: 'contact' },
   ], []);
 
   const scrollToSection = (sectionId: string) => {

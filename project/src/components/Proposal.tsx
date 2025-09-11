@@ -1,5 +1,5 @@
 import React from 'react';
-import { Lightbulb, Target, Award, Zap } from 'lucide-react';
+import { Lightbulb, Target, Award,  } from 'lucide-react';
 
 const Proposal = () => {
   const features = [
