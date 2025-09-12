@@ -59,10 +59,10 @@ const Header: React.FC = () => {
   const navItems = React.useMemo(() => [
   { name: 'Home', path: '/', sectionId: 'home' },
   { name: 'About', path: '/about' },
-  { name: 'Rules', path: '/', sectionId: 'rules' },
-  { name: 'Sponsors', path: '/', sectionId: 'sponsors' },
-  { name: 'Register', path: '/', sectionId: 'register' },
   { name: 'Proposal', path: '/', sectionId: 'proposal' },
+  { name: 'Rules', path: '/', sectionId: 'rules' },
+  //{ name: 'Sponsors', path: '/sponsors' },
+  { name: 'Register', path: '/', sectionId: 'register' },
   { name: 'Contact', path: '/', sectionId: 'contact' },
   ], []);
 
@@ -239,9 +239,9 @@ const Header: React.FC = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            {navItems.map((item) => (
+            {[...new Map(navItems.map(item => [item.name + item.path, item])).values()].map((item) => (
               <motion.button
-                key={item.path}
+                key={item.name + item.path}
                 onClick={() => handleNavClick(item.path!, item.sectionId)}
                 className={`transition-colors relative px-4 py-2 font-medium font-inter ${
                   isCurrentPage(item.path, item.sectionId) 
@@ -293,8 +293,8 @@ const Header: React.FC = () => {
             className="md:hidden overflow-hidden"
           >
             <nav className="pt-4 pb-2 border-t border-neon-mint/30 mt-4">
-              {navItems.map((item) => (
-                <React.Fragment key={item.name}>
+              {[...new Map(navItems.map(item => [item.name + item.path, item])).values()].map((item) => (
+                <React.Fragment key={item.name + item.path}>
                   <motion.button
                     onClick={() => item.path && handleNavClick(item.path, item.sectionId)}
                     className={`block w-full text-left py-3 px-4 transition-colors text-lg font-inter ${

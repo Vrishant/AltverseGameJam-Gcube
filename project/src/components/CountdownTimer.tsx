@@ -10,11 +10,12 @@ const CountdownTimer = () => {
   });
 
   useEffect(() => {
-    const targetDate = new Date('2025-09-13T00:00:00').getTime();
+  // Set target date for 9:00 AM IST (UTC+5:30)
+  const targetDateIST = new Date(Date.UTC(2025, 8, 13, 3, 30, 0)).getTime();
 
     const updateCountdown = () => {
-      const now = new Date().getTime();
-      const difference = targetDate - now;
+  const now = new Date().getTime();
+  const difference = targetDateIST - now;
 
       if (difference > 0) {
         const days = Math.floor(difference / (1000 * 60 * 60 * 24));
@@ -45,36 +46,44 @@ const CountdownTimer = () => {
     <div className="bg-gradient-to-br from-gunmetal/80 to-onyx/80 tri-cut p-6 neon-border glass backdrop-blur-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-neon-mint/5 to-teal-glow/5"></div>
       <div className="relative z-10">
-        <div className="flex items-center justify-center mb-4">
-          <Clock className="w-6 h-6 text-neon-mint mr-2 animate-pulse" />
-          <h3 className="text-lg font-bold text-soft-white font-orbitron">
-            Event Starts In
-          </h3>
-        </div>
-        
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-          {timeUnits.map((unit, index) => (
-            <div key={unit.label} className="text-center">
-              <div className="bg-gunmetal/60 tri-cut-sm p-3 neon-border relative overflow-hidden group">
-                <div className="absolute inset-0 bg-gradient-to-br from-neon-mint/10 to-teal-glow/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative z-10">
-                  <div className="text-2xl md:text-3xl font-bold text-neon-mint font-orbitron mb-1 tabular-nums">
-                    {unit.value.toString().padStart(2, '0')}
-                  </div>
-                  <div className="text-xs text-soft-white/60 font-inter uppercase tracking-wider">
-                    {unit.label}
+        {timeLeft.days === 0 && timeLeft.hours === 0 && timeLeft.minutes === 0 && timeLeft.seconds === 0 ? (
+          <div className="flex flex-col items-center justify-center py-8">
+            <Clock className="w-8 h-8 text-neon-mint mb-4 animate-pulse" />
+            <h3 className="text-2xl font-bold text-neon-mint font-orbitron mb-2">Altverse has begun</h3>
+            <p className="text-lg text-soft-white font-inter">May the best game win.</p>
+          </div>
+        ) : (
+          <>
+            <div className="flex items-center justify-center mb-4">
+              <Clock className="w-6 h-6 text-neon-mint mr-2 animate-pulse" />
+              <h3 className="text-lg font-bold text-soft-white font-orbitron">
+                Event Starts In
+              </h3>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {timeUnits.map((unit) => (
+                <div key={unit.label} className="text-center">
+                  <div className="bg-gunmetal/60 tri-cut-sm p-3 neon-border relative overflow-hidden group">
+                    <div className="absolute inset-0 bg-gradient-to-br from-neon-mint/10 to-teal-glow/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="relative z-10">
+                      <div className="text-2xl md:text-3xl font-bold text-neon-mint font-orbitron mb-1 tabular-nums">
+                        {unit.value.toString().padStart(2, '0')}
+                      </div>
+                      <div className="text-xs text-soft-white/60 font-inter uppercase tracking-wider">
+                        {unit.label}
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
-          ))}
-        </div>
-        
-        <div className="mt-4 text-center">
-          <p className="text-sm text-soft-white/70 font-inter">
-            September 13-14, 2025 • MRD Auditorium, RR Campus
-          </p>
-        </div>
+            <div className="mt-4 text-center">
+              <p className="text-sm text-soft-white/70 font-inter">
+                September 13-14, 2025 • MRD Auditorium, RR Campus
+              </p>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

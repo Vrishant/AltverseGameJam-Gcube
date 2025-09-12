@@ -9,20 +9,22 @@ import Register from './components/Register';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import About from './components/About';
+//import ChiefGuest from './components/ChiefGuest';
+import SponsorsPage from './components/SponsorsPage';
 
-import Sponsors from './components/Sponsors';
+import SponsorsHome from './components/SponsorsHome';
 
 
 function MainPage() {
   return (
     <>
-      <Hero />
-      <Proposal />
-      <Rules />
-    <Sponsors />
-      <Register />
-      <Contact />
-      <Footer />
+  <Hero />
+  <Proposal />
+  <Rules />
+  <SponsorsHome />
+  <Register />
+  <Contact />
+  <Footer />
     </>
   );
 }
@@ -31,10 +33,11 @@ function App() {
   return (
     <div className="min-h-screen bg-graphite text-soft-white">
       <Header />
-      <div> {/* Removed padding completely */}
+      <div>
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/about" element={<About />} />
+          <Route path="/sponsors" element={<SponsorsPage />} />
         </Routes>
       </div>
     </div>

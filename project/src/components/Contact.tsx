@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, MessageCircle, Instagram, Github, MapPin } from 'lucide-react';
+import { Mail, Instagram, Github, MapPin } from 'lucide-react';
 
 const Contact = () => {
   const contactMethods = [
@@ -8,12 +8,6 @@ const Contact = () => {
       title: "Email",
       description: "gcube@pes.edu",
       link: "mailto:gcube@pes.edu"
-    },
-    {
-      icon: <MessageCircle className="w-6 h-6" />,
-      title: "Discord",
-      description: "Join our server",
-      link: "#"
     },
     {
       icon: <Instagram className="w-6 h-6" />,
